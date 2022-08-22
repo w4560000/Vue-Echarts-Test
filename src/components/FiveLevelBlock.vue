@@ -36,7 +36,7 @@ export default {
   props: {},
   data() {
     return {
-      fiveLevelObj: [],
+      fiveLevelObj: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
       filterFormData: {
         StartDate: moment().locale("zh-tw").format("YYYY-MM-DD"),
         EndDate: moment().locale("zh-tw").format("YYYY-MM-DD"),
