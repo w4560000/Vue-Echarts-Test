@@ -69,7 +69,10 @@ export default {
       this.init();
     },
     test() {
-      for (let i = 0; i < 13; i++) this.fiveLevelObj[i] += 1;
+      // for (let i = 0; i < 13; i++) this.fiveLevelObj[i] += 1;
+      this.fiveLevelObj = JSON.parse(
+        '[{"hospitaL_CODE":"0421040011","hospitalNickName":"成大醫院","chK_LEVEL1":0,"chK_LEVEL2":3,"chK_LEVEL3":0,"chK_LEVEL4":0,"chK_LEVEL5":0},{"hospitaL_CODE":"1141310019","hospitalNickName":"奇美醫院","chK_LEVEL1":0,"chK_LEVEL2":3,"chK_LEVEL3":0,"chK_LEVEL4":0,"chK_LEVEL5":0},{"hospitaL_CODE":"1141090512","hospitalNickName":"柳營奇美醫院","chK_LEVEL1":0,"chK_LEVEL2":3,"chK_LEVEL3":0,"chK_LEVEL4":0,"chK_LEVEL5":0},{"hospitaL_CODE":"1105050012","hospitalNickName":"佳里奇美醫院","chK_LEVEL1":0,"chK_LEVEL2":3,"chK_LEVEL3":0,"chK_LEVEL4":0,"chK_LEVEL5":0},{"hospitaL_CODE":"1121010018","hospitalNickName":"台南新樓醫院","chK_LEVEL1":0,"chK_LEVEL2":3,"chK_LEVEL3":0,"chK_LEVEL4":0,"chK_LEVEL5":0},{"hospitaL_CODE":"1105040016","hospitalNickName":"麻豆新樓醫院","chK_LEVEL1":0,"chK_LEVEL2":3,"chK_LEVEL3":0,"chK_LEVEL4":0,"chK_LEVEL5":0},{"hospitaL_CODE":"1305370013","hospitalNickName":"台南市安南醫院","chK_LEVEL1":0,"chK_LEVEL2":3,"chK_LEVEL3":0,"chK_LEVEL4":0,"chK_LEVEL5":0},{"hospitaL_CODE":"0905320023","hospitalNickName":"台南市立醫院","chK_LEVEL1":0,"chK_LEVEL2":3,"chK_LEVEL3":0,"chK_LEVEL4":0,"chK_LEVEL5":0},{"hospitaL_CODE":"0641310018","hospitalNickName":"榮總醫院臺南分院","chK_LEVEL1":0,"chK_LEVEL2":3,"chK_LEVEL3":0,"chK_LEVEL4":0,"chK_LEVEL5":0},{"hospitaL_CODE":"0141010013","hospitalNickName":"衛部新營醫院","chK_LEVEL1":0,"chK_LEVEL2":3,"chK_LEVEL3":0,"chK_LEVEL4":0,"chK_LEVEL5":0},{"hospitaL_CODE":"0121050011","hospitalNickName":"衛部臺南醫院","chK_LEVEL1":0,"chK_LEVEL2":3,"chK_LEVEL3":0,"chK_LEVEL4":0,"chK_LEVEL5":0},{"hospitaL_CODE":"0141060513","hospitalNickName":"衛部臺南新化分院","chK_LEVEL1":0,"chK_LEVEL2":3,"chK_LEVEL3":0,"chK_LEVEL4":0,"chK_LEVEL5":0},{"hospitaL_CODE":"1521031104","hospitalNickName":"郭綜合醫院","chK_LEVEL1":0,"chK_LEVEL2":3,"chK_LEVEL3":0,"chK_LEVEL4":0,"chK_LEVEL5":0}]'
+      );
     },
     test2() {
       this.fiveLevelObj = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];

@@ -8,6 +8,7 @@
 
 <script>
 import * as echarts from "echarts";
+import { fn } from "moment";
 //echarts套件
 const acPieChart = {
   title: {
@@ -183,11 +184,97 @@ export default {
   watch: {
     fiveLevelObj: {
       handler(newValue, oldValue) {
-        console.log("oldValue=" + oldValue);
-        console.log("newValue=" + newValue);
+        //console.log("oldValue=" + oldValue);
+        //console.log("newValue=" + newValue);
         const acChart01 = echarts.init(document.getElementById("acChart01"));
 
-        this.acPieChart.series[0].data = newValue;
+        this.acPieChart.series[0].data = [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+        ];
+        this.acPieChart.series[1].data = [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+        ];
+        this.acPieChart.series[2].data = [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+        ];
+        this.acPieChart.series[3].data = [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+        ];
+        this.acPieChart.series[4].data = [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+        ];
+
+        console.log(acPieChart.yAxis.data);
+        newValue.forEach((f) => {
+          let index = acPieChart.yAxis.data.indexOf(f.hospitalNickName);
+
+          this.acPieChart.series[0].data[index] = f.chK_LEVEL1;
+          this.acPieChart.series[1].data[index] = f.chK_LEVEL2;
+          this.acPieChart.series[2].data[index] = f.chK_LEVEL3;
+          this.acPieChart.series[3].data[index] = f.chK_LEVEL4;
+          this.acPieChart.series[4].data[index] = f.chK_LEVEL5;
+        });
+
         acChart01.setOption(acPieChart);
       },
       deep: true,
