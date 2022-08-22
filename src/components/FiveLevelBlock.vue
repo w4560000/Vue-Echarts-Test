@@ -2,7 +2,7 @@
   <div class="card">
     <div class="card-body">
       <h5 class="card-title">
-        <input type="button" value="新增檢傷1級資料" @click="test" />
+        <input type="button" value="載入測試資料" @click="test" />
         <input type="button" value="清除資料" @click="test2" />
         <div class="card-titleCenter">急診檢傷人數(本事件)</div>
         <div class="card-titleBottom">
